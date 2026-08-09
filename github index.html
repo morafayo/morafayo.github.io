@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morafa Oluwatoyin — Financial Crime, AML/KYC &amp; Digital Assets</title>
+<meta name="description" content="Morafa Oluwatoyin — AML/KYC and digital-assets financial-crime specialist. Investigations, blockchain analytics, transaction monitoring, sanctions, and AI reasoning evaluation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#13273F;
+    --ink-soft:#1E3A5C;
+    --ink-deep:#0E1D30;
+    --paper:#EDF0F4;
+    --card:#FFFFFF;
+    --brass:#B4894E;
+    --brass-bright:#D8B877;
+    --slate:#566577;
+    --slate-light:#8996A5;
+    --line:rgba(19,39,63,0.14);
+    --line-ink:rgba(216,184,119,0.22);
+    --serif:'Spectral',Georgia,'Times New Roman',serif;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--brass);
+    font-weight:500;
+  }
+
+  /* ---------- Nav ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(237,240,244,.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .mark{font-family:var(--serif);font-weight:600;font-size:1.05rem;letter-spacing:.01em}
+  .mark span{color:var(--brass)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--slate);transition:color .2s;
+  }
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{
+    border:1px solid var(--brass);color:var(--ink);
+    padding:8px 16px;border-radius:2px;
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+    transition:all .2s;
+  }
+  .nav-cta:hover{background:var(--brass);color:#fff}
+  .menu-btn{display:none;background:none;border:0;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);cursor:pointer}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      linear-gradient(180deg,var(--ink) 0%,var(--ink-deep) 100%);
+    color:#EAF0F7;
+    position:relative;
+    overflow:hidden;
+    padding:88px 0 74px;
+  }
+  .hero::before{
+    /* faint ledger grid */
+    content:"";position:absolute;inset:0;
+    background-image:repeating-linear-gradient(0deg,transparent 0 46px,rgba(216,184,119,.05) 46px 47px);
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative}
+  .hero .eyebrow{color:var(--brass-bright)}
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(2.7rem,7vw,5.1rem);
+    line-height:1.02;
+    letter-spacing:-.015em;
+    margin:.32em 0 .28em;
+  }
+  .hero h1 .thin{color:var(--brass-bright);font-style:italic;font-weight:400}
+  .lede{
+    font-family:var(--serif);
+    font-size:clamp(1.12rem,2.1vw,1.42rem);
+    line-height:1.5;
+    color:#C6D3E2;
+    max-width:44ch;
+    font-weight:400;
+  }
+  .ticker{
+    margin-top:34px;display:flex;flex-wrap:wrap;gap:0;
+    border-top:1px solid var(--line-ink);border-bottom:1px solid var(--line-ink);
+  }
+  .ticker span{
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+    color:#9DB0C6;padding:13px 20px 13px 0;position:relative;
+  }
+  .ticker span:not(:last-child){margin-right:20px}
+  .ticker span:not(:last-child)::after{content:"";position:absolute;right:0;top:50%;transform:translateY(-50%);width:1px;height:12px;background:var(--line-ink)}
+  .ticker b{color:var(--brass-bright);font-weight:500}
+  .hero-cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:13px 22px;border-radius:2px;
+    font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
+    transition:all .2s;cursor:pointer;border:1px solid transparent;
+  }
+  .btn-solid{background:var(--brass);color:#12233B;font-weight:500}
+  .btn-solid:hover{background:var(--brass-bright)}
+  .btn-ghost{border-color:rgba(216,184,119,.4);color:#EAF0F7}
+  .btn-ghost:hover{border-color:var(--brass-bright);background:rgba(216,184,119,.08)}
+  .avail{
+    margin-top:30px;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:#8CA0B7;
+    display:flex;align-items:center;gap:9px;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:#5FBF8F;box-shadow:0 0 0 3px rgba(95,191,143,.2)}
+
+  /* ---------- Section scaffold ---------- */
+  section{padding:78px 0}
+  .sec-head{margin-bottom:44px;max-width:52ch}
+  .sec-head h2{
+    font-family:var(--serif);font-weight:600;
+    font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.1;letter-spacing:-.01em;
+    margin-top:.35em;
+  }
+  .sec-head p{margin-top:16px;color:var(--slate);font-size:1.02rem}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr;gap:34px}
+  .about-lead{
+    font-family:var(--serif);font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.42;
+    color:var(--ink);font-weight:400;max-width:34ch;
+  }
+  .about-body p{color:var(--slate);margin-bottom:16px;max-width:60ch}
+  .about-body strong{color:var(--ink);font-weight:600}
+  @media(min-width:820px){.about-grid{grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}}
+
+  /* ---------- Coverage matrix (signature) ---------- */
+  .matrix-sec{background:var(--ink);color:#E7EEF6}
+  .matrix-sec .eyebrow{color:var(--brass-bright)}
+  .matrix-sec .sec-head h2{color:#F2F6FB}
+  .matrix-sec .sec-head p{color:#A7B7CA}
+  .matrix{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line-ink)}
+  .dom{
+    display:grid;grid-template-columns:auto 1fr;gap:22px;
+    padding:26px 4px;border-bottom:1px solid var(--line-ink);
+    transition:background .25s,padding-left .25s;
+  }
+  .dom:hover{background:rgba(216,184,119,.05);padding-left:14px}
+  .dom-idx{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--brass-bright);padding-top:6px}
+  .dom h3{font-family:var(--serif);font-size:1.28rem;font-weight:500;color:#F2F6FB;margin-bottom:7px;letter-spacing:.005em}
+  .dom p{font-family:var(--mono);font-size:.76rem;line-height:1.9;letter-spacing:.03em;color:#93A5BA}
+  .dom .tag{color:#C9D6E6}
+  @media(min-width:720px){.dom{grid-template-columns:70px 1fr;gap:34px;padding:30px 4px}}
+
+  /* ---------- Capabilities ---------- */
+  .caps{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .cap{background:var(--card);padding:28px 26px}
+  .cap .eyebrow{color:var(--brass)}
+  .cap h3{font-family:var(--serif);font-size:1.16rem;font-weight:600;margin:10px 0 9px}
+  .cap p{color:var(--slate);font-size:.95rem}
+  @media(min-width:640px){.caps{grid-template-columns:1fr 1fr}}
+  @media(min-width:960px){.caps{grid-template-columns:repeat(3,1fr)}}
+
+  /* ---------- Timeline ---------- */
+  .track{border-top:1px solid var(--line)}
+  .stint{
+    display:grid;grid-template-columns:1fr;gap:4px 28px;
+    padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline;
+  }
+  .stint .yr{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;color:var(--brass)}
+  .stint .org{font-family:var(--serif);font-size:1.18rem;font-weight:600}
+  .stint .role{color:var(--slate);font-size:.95rem}
+  @media(min-width:720px){
+    .stint{grid-template-columns:150px 1fr;}
+    .stint .role{text-align:left}
+  }
+
+  /* ---------- Credentials ---------- */
+  .cred-sec{background:var(--card)}
+  .cred-grid{display:grid;grid-template-columns:1fr;gap:44px}
+  @media(min-width:820px){.cred-grid{grid-template-columns:1.3fr 1fr;gap:60px}}
+  .cred-list{list-style:none;display:flex;flex-direction:column;gap:0}
+  .cred-list li{
+    display:flex;gap:16px;align-items:baseline;
+    padding:13px 0;border-bottom:1px solid var(--line);
+  }
+  .cred-list .code{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--brass);white-space:nowrap;min-width:64px}
+  .cred-list .name{font-size:.97rem;color:var(--ink)}
+  .cred-list .yr{margin-left:auto;font-family:var(--mono);font-size:.72rem;color:var(--slate-light)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .chip{
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;
+    border:1px solid var(--line);color:var(--slate);
+    padding:6px 11px;border-radius:2px;background:var(--paper);
+  }
+  .sub{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;display:block}
+  .edu-item{padding:12px 0;border-bottom:1px solid var(--line)}
+  .edu-item .deg{font-family:var(--serif);font-size:1.02rem;font-weight:600}
+  .edu-item .school{color:var(--slate);font-size:.9rem}
+
+  /* ---------- Contact ---------- */
+  .contact{background:linear-gradient(180deg,var(--ink-deep),var(--ink));color:#EAF0F7;text-align:left}
+  .contact .eyebrow{color:var(--brass-bright)}
+  .contact h2{font-family:var(--serif);font-size:clamp(2rem,4.4vw,3rem);font-weight:600;margin:.3em 0 .5em;line-height:1.08;max-width:20ch}
+  .contact h2 em{color:var(--brass-bright);font-weight:400}
+  .contact-rows{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line-ink);max-width:640px}
+  .crow{
+    display:flex;justify-content:space-between;align-items:center;gap:18px;
+    padding:18px 0;border-bottom:1px solid var(--line-ink);
+  }
+  .crow .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#8CA0B7}
+  .crow .v{font-size:1rem;color:#EAF0F7;transition:color .2s}
+  a.crow:hover .v{color:var(--brass-bright)}
+  .note{margin-top:34px;font-size:.86rem;color:#7C90A8;max-width:56ch;line-height:1.7;border-left:2px solid var(--brass);padding-left:16px}
+
+  footer{background:var(--ink-deep);color:#6E819A;padding:26px 0;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:720px){
+    .nav-links{display:none}
+    .menu-btn{display:block}
+    .nav-links.open{
+      display:flex;position:absolute;top:64px;left:0;right:0;
+      flex-direction:column;gap:0;background:var(--paper);
+      border-bottom:1px solid var(--line);padding:6px 28px 18px;
+    }
+    .nav-links.open a{padding:12px 0;border-bottom:1px solid var(--line)}
+    .nav-links.open .nav-cta{border:1px solid var(--brass);text-align:center;margin-top:10px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto}
+    .reveal{transition:none;opacity:1;transform:none}
+    .dom,.btn,.nav-cta{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="mark">Morafa <span>Oluwatoyin</span></a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#about">Profile</a>
+      <a href="#domains">Domains</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Financial Crime · AML / KYC · Digital Assets</p>
+      <h1>Forensic judgment<br>for <span class="thin">high-risk</span> finance.</h1>
+      <p class="lede">Seven years turning suspicious activity into defensible, audit-ready decisions — across banking, fintech, crypto, and now AI evaluation.</p>
+
+      <div class="ticker">
+        <span><b>CAMS</b></span>
+        <span><b>CFE</b></span>
+        <span><b>CGSS</b></span>
+        <span><b>CCAS</b></span>
+        <span><b>Chainalysis</b> CISC · CRC · CEIC</span>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-solid">Work with me →</a>
+        <a href="#domains" class="btn btn-ghost">See coverage</a>
+      </div>
+
+      <p class="avail"><span class="dot"></span> Open to senior AML / financial-crime &amp; digital-asset roles · Greater NYC &amp; Remote</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="reveal">
+          <p class="eyebrow">Profile</p>
+          <p class="about-lead">One financial-crime specialist, built for the places where risk is hardest to read.</p>
+        </div>
+        <div class="about-body reveal">
+          <p>I&rsquo;m <strong>Morafa Oluwatoyin</strong> — an AML/KYC and digital-assets financial-crime professional with 7+ years across <strong>Customers Bank, OKX, Flagstar, Signature Bank, Binance US, and Uphold</strong>.</p>
+          <p>My work sits where traditional banking controls meet blockchain: enhanced due diligence on high-risk and institutional clients, on-chain investigations and wallet attribution, transaction-monitoring and sanctions review, and the frameworks, playbooks, and training that hold it all together.</p>
+          <p>Most recently I&rsquo;ve extended that judgment into <strong>AI</strong> — building and grading model outputs on AML, KYC, transaction-monitoring, and onboarding tasks — pairing an <strong>M.S. in Business Analytics &amp; AI</strong> with hands-on SQL and Python.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COVERAGE MATRIX -->
+  <section id="domains" class="matrix-sec">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Coverage Matrix</p>
+        <h2>Five domains, one operator.</h2>
+        <p>The same forensic method, tuned to the risk each field actually carries.</p>
+      </div>
+      <div class="matrix">
+        <div class="dom reveal">
+          <div class="dom-idx">D-01</div>
+          <div>
+            <h3>Fraud Operations &amp; Business Risk</h3>
+            <p><span class="tag">Account takeover</span> · payment &amp; transaction fraud · scam &amp; abuse detection · anomaly review · risk-ops decisioning</p>
+          </div>
+        </div>
+        <div class="dom reveal">
+          <div class="dom-idx">D-02</div>
+          <div>
+            <h3>Crypto Financial Crime &amp; Digital Assets</h3>
+            <p><span class="tag">Blockchain tracing</span> · wallet attribution &amp; clustering · exposure analysis · mixers, darknet &amp; DeFi typologies · VASP due diligence</p>
+          </div>
+        </div>
+        <div class="dom reveal">
+          <div class="dom-idx">D-03</div>
+          <div>
+            <h3>Transaction Monitoring &amp; AML Operations</h3>
+            <p><span class="tag">Alert adjudication</span> · SAR investigations · KYC / CDD / EDD · detection-scenario tuning · sanctions &amp; OFAC screening</p>
+          </div>
+        </div>
+        <div class="dom reveal">
+          <div class="dom-idx">D-04</div>
+          <div>
+            <h3>BSA/AML Program &amp; Digital-Asset Advisory</h3>
+            <p><span class="tag">Framework &amp; policy design</span> · playbooks &amp; job aids · risk assessments of novel products · FIU coordination · exam readiness</p>
+          </div>
+        </div>
+        <div class="dom reveal">
+          <div class="dom-idx">D-05</div>
+          <div>
+            <h3>Financial-Crime Data &amp; AI Evaluation</h3>
+            <p><span class="tag">Model-output review</span> · rubric-based grading · severity scoring · SQL &amp; Python analysis · graph / network analysis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section id="capabilities">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">What I do</p>
+        <h2>Capabilities</h2>
+        <p>Representative of the work — engagement specifics stay confidential.</p>
+      </div>
+      <div class="caps">
+        <div class="cap reveal">
+          <p class="eyebrow">01 — Investigate</p>
+          <h3>Blockchain &amp; financial-crime investigations</h3>
+          <p>Trace fund flows, attribute wallets, and quantify direct and indirect exposure to sanctioned entities, mixers, and high-risk services in Chainalysis, TRM, and Elliptic.</p>
+        </div>
+        <div class="cap reveal">
+          <p class="eyebrow">02 — Verify</p>
+          <h3>KYC, EDD &amp; onboarding</h3>
+          <p>Review ownership, source of funds, expected activity, and jurisdiction for high-risk, institutional, and digital-asset clients — with defensible risk ratings.</p>
+        </div>
+        <div class="cap reveal">
+          <p class="eyebrow">03 — Monitor</p>
+          <h3>Transaction monitoring &amp; detection</h3>
+          <p>Adjudicate alerts, tune detection scenarios, and refine risk indicators across Actimize and Unit21, integrating on-chain and fiat activity.</p>
+        </div>
+        <div class="cap reveal">
+          <p class="eyebrow">04 — Screen</p>
+          <h3>Sanctions &amp; OFAC exposure</h3>
+          <p>Assess exposure to designated entities and high-risk jurisdictions; escalate and coordinate SAR referrals with the Financial Intelligence Unit.</p>
+        </div>
+        <div class="cap reveal">
+          <p class="eyebrow">05 — Build</p>
+          <h3>Frameworks, policy &amp; QA</h3>
+          <p>Design policies, playbooks, and job aids; run QA and analyst training; prepare for regulatory examinations and audit points.</p>
+        </div>
+        <div class="cap reveal">
+          <p class="eyebrow">06 — Analyze</p>
+          <h3>Data &amp; AI evaluation</h3>
+          <p>Automate extraction and analysis in SQL and Python; grade AI model reasoning against standards with structured severity scoring and citations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section id="credentials" class="cred-sec">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Credentials &amp; toolkit</p>
+        <h2>Certified across the discipline.</h2>
+      </div>
+      <div class="cred-grid">
+        <div class="reveal">
+          <ul class="cred-list">
+            <li><span class="code">CAMS</span><span class="name">Certified Anti-Money Laundering Specialist</span><span class="yr">2023</span></li>
+            <li><span class="code">CFE</span><span class="name">Certified Fraud Examiner</span><span class="yr">2024</span></li>
+            <li><span class="code">CGSS</span><span class="name">Certified Global Sanctions Specialist</span><span class="yr">2025</span></li>
+            <li><span class="code">CCAS</span><span class="name">Certified Cryptoasset Anti-Financial Crime Specialist</span><span class="yr">2025</span></li>
+            <li><span class="code">CISC/CRC/CEIC</span><span class="name">Chainalysis Investigation, Reactor &amp; Ethereum</span><span class="yr">2024</span></li>
+            <li><span class="code">CCIA/CCIE</span><span class="name">Certified Cryptocurrency Investigator, Advanced &amp; Ethereum</span><span class="yr">2026</span></li>
+            <li><span class="code">Google</span><span class="name">Introduction to Artificial Intelligence</span><span class="yr">2026</span></li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <span class="sub">Tools</span>
+          <div class="chips">
+            <span class="chip">Chainalysis Reactor / KYT</span>
+            <span class="chip">TRM Labs</span>
+            <span class="chip">Elliptic</span>
+            <span class="chip">CipherTrace</span>
+            <span class="chip">Actimize</span>
+            <span class="chip">Unit21</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Python</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">Tableau</span>
+            <span class="chip">Alteryx</span>
+            <span class="chip">World-Check</span>
+          </div>
+          <span class="sub" style="margin-top:30px">Education</span>
+          <div class="edu-item">
+            <div class="deg">M.S., Business Analytics &amp; Artificial Intelligence</div>
+            <div class="school">Montclair State University — in view</div>
+          </div>
+          <div class="edu-item">
+            <div class="deg">B.Eng., Chemical Engineering</div>
+            <div class="school">Federal University of Technology, Minna</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE TIMELINE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Track record</p>
+        <h2>Where I&rsquo;ve done the work.</h2>
+      </div>
+      <div class="track reveal">
+        <div class="stint"><div class="yr">2025 — Present</div><div><div class="org">Mercor</div><div class="role">AML/KYC Domain Expert — AI Training &amp; Evaluation</div></div></div>
+        <div class="stint"><div class="yr">2024 — 2026</div><div><div class="org">Customers Bank</div><div class="role">Senior KYC Analyst — Digital Assets &amp; High-Risk Customers</div></div></div>
+        <div class="stint"><div class="yr">2024</div><div><div class="org">OKX Group</div><div class="role">Senior Compliance Analyst — AML Investigations</div></div></div>
+        <div class="stint"><div class="yr">2023</div><div><div class="org">Flagstar Bank</div><div class="role">Senior Compliance Analyst</div></div></div>
+        <div class="stint"><div class="yr">2022 — 2023</div><div><div class="org">Signature Bank</div><div class="role">Senior Compliance Analyst — Financial Intelligence Unit (Digital Assets)</div></div></div>
+        <div class="stint"><div class="yr">2021 — 2022</div><div><div class="org">Binance US</div><div class="role">Financial Crime Investigator / Transaction Monitoring Analyst</div></div></div>
+        <div class="stint"><div class="yr">2020 — 2021</div><div><div class="org">Uphold</div><div class="role">Crypto Transaction Monitoring Analyst</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Let&rsquo;s talk <em>risk, crypto,</em> and getting it right.</h2>
+      <div class="contact-rows">
+        <a class="crow" href="mailto:morafadatapro@gmail.com">
+          <span class="k">Email</span><span class="v">morafadatapro@gmail.com</span>
+        </a>
+        <a class="crow" href="https://www.linkedin.com/in/morafa-oluwatoyin-cams-ccas-cgss-cfe-cisc-769abb205/" target="_blank" rel="noopener">
+          <span class="k">LinkedIn</span><span class="v">in/morafa-oluwatoyin →</span>
+        </a>
+        <div class="crow">
+          <span class="k">Based</span><span class="v">Greater New York City · Remote-ready</span>
+        </div>
+      </div>
+      <p class="note">A note on discretion: case files, SARs, and client records are confidential by nature and never appear here. What you see is method and coverage — the specifics I&rsquo;m glad to walk through in an interview.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>© 2026 Morafa Oluwatoyin</span>
+    <span>AML · KYC · Digital Assets · Financial Crime</span>
+  </div>
+</footer>
+
+<script>
+  // mobile menu
+  var mb=document.getElementById('menuBtn'),nl=document.getElementById('navlinks');
+  mb&&mb.addEventListener('click',function(){nl.classList.toggle('open')});
+  nl&&nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('open')})});
+  // scroll reveal
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
